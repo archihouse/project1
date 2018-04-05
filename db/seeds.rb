@@ -3,10 +3,10 @@ u1 = User.create :email => 'james@jack.com'
 u2 = User.create :email => 'jack@jack.com'
 
 City.destroy_all
-c1 = City.create(:name => "King's Landing", :population => 1000000, :image => 'https://vignette.wikia.nocookie.net/gameofthrones/images/4/43/GreatSeptExteriors.jpg/revision/latest?cb=20150321161915')
-c2 = City.create(:name => 'Winterfell', :population => 7000, :image => 'https://vignette.wikia.nocookie.net/gameofthrones/images/5/50/Winterfell_Exterior.jpg/revision/latest?cb=20110705175851')
+c1 = City.create(:name => "King's Landing", :population => 1000000, :image => 'http://cdn.playbuzz.com/cdn/92caa2a3-c5a8-4153-94b7-663602ef4a30/98e3b080-414c-4379-91a4-81a394a07409.jpg')
+c2 = City.create(:name => 'Winterfell', :population => 7000, :image => 'http://www.insider.gr/sites/default/files/winterfell-2.jpg')
 c3 = City.create(:name => 'The Dreadfort', :population => 4000, :image => 'https://cdna.artstation.com/p/assets/images/images/008/533/990/large/anton-bobrowski-dreadfort.jpg?1513363169')
-c4 = City.create(:name => 'Braavos', :population => 900000, :image => 'https://vignette.wikia.nocookie.net/gameofthrones/images/4/43/Braavos_5x02.png/revision/latest?cb=20150420161039')
+c4 = City.create(:name => 'Braavos', :population => 900000, :image => 'https://cinelogin.files.wordpress.com/2014/05/got-01.jpg')
 c5 = City.create(:name => 'Yin', :population => 1500000, :image => 'https://i.ytimg.com/vi/dLqwrfgTEEE/maxresdefault.jpg')
 
 House.destroy_all
