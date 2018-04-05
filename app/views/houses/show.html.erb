@@ -1,0 +1,19 @@
+<h1><%= @house.name %></h1> <!-- Show name of House at top of the page -->
+
+<ul> <!-- Create list of House info -->
+  <li><p>Current Lord:  <%= @house.lord %></p></li> <!-- Show name of the current lord -->
+  <li><p>Current Heir:  <%= @house.heir %></p></li> <!-- Show name of the current heir -->
+  <li><p>Words:  <%= @house.words %></p></li> <!-- Show the House's words -->
+</ul>
+
+<% if @house.image.present? %>
+<%= image_tag @house.image, :alt => @house.name, :class => 'feature' %> <!-- Shows image of the House's sigil as a feature class image -->
+<!-- uses image_tag to pull image url from seeds page -->
+<% end %>
+
+<% if @current_user.present? %>
+<div class="controls"> <!-- div class for edit and delete buttons -->
+  <%= link_to 'Edit House', edit_house_path(@house) %> <!-- create link (link_to) to 'Edit House' and sets connection to @house values to edit House as necessary -->
+  <%= link_to 'Delete House', @house, :method => 'delete', :data => { :confirm => 'Are you sure?' }%> <!-- create link (link_to) to 'Delete House', runs 'delete' method on @house, then runs the confirmation question as a data event -->
+</div>
+<% end %>

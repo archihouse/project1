@@ -1,0 +1,17 @@
+<h1><%= @city.name %></h1> <!-- Show name of City at top of the page -->
+
+<ul> <!-- Create list of City info -->
+  <li><p>Population:  <%= @city.population %></p></li> <!-- Show population of city -->
+  <li><p>Name of House:  <%= @city.house.name %></p></li> <!-- Show correspondent House -->
+  <li><p>Region:  <%= @city.region.name %></p></li> <!-- Show correspondent Region -->
+</ul>
+
+<%= image_tag @city.image, :alt => @city.name, :class => 'feature' %> <!-- Shows image of City as feature class image -->
+<!-- uses image_tag to pull image url from seeds page -->
+
+<% if @current_user.present? %>
+<div class="controls"> <!-- div class for edit and delete buttons -->
+  <%= link_to 'Edit City', edit_city_path(@city) %> <!-- create link (link_to) to 'Edit City' and sets connection to @city values to edit city as necessary -->
+  <%= link_to 'Delete City', @city, :method => 'delete', :data => { :confirm => 'Are you sure?' }%> <!-- create link (link_to) to 'Delete City', runs 'delete' method on @city, then runs the confirmation question as a data event -->
+</div>
+<% end %>

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+body, html {
+  background-image: url("https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/10/12/the-wall.jpg");
+  height: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: #fff0ef;
+  padding: 50px;
+  border: 2px solid white;
+}
+
+.login {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: right;
+  background-color: #fff0ef;
+  padding: 0 50px 10px 50px;
+  border: 2px solid white;
+}
+
+.thumb {
+  max-height: 10em;
+}
+
+.feature {
+  max-width: 100%;
+}

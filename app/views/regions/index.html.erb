@@ -1,0 +1,14 @@
+<h1>Regions</h1>
+
+<% @regions.each do |region| %>
+
+<%= image_tag region.image, :alt => region.name, :class => 'thumb' %>
+
+<ul>
+  <li><p>Name:  <%= link_to region.name, region %><p></li>
+  <li><p>Culture:  <%= region.culture %></p></li>
+  <li><p>Religion:  <%= region.religion %></p></li>
+  <li><p>Capital:  <%= region.capital %></p></li>
+</ul>
+
+<% end %>

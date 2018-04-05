@@ -1,0 +1,20 @@
+<h1>Houses</h1>
+
+<% @houses.each do |house| %>
+
+<% if house.image.present? %>
+  <%= image_tag house.image, :alt => house.name, :class => 'thumb' %>
+<% end %>
+
+<ul>
+  <li><p>House Name:  <%= link_to house.name, house %></p></li>
+  <li><p>Current Lord:  <%= house.lord %></p></li>
+  <% if house.heir.present? %>
+  <li><p>Current Heir:  <%= house.heir %></p></li>
+  <% end %>
+  <% if house.words.present? %>
+  <li><p>Words:  <%= house.words %></p></li>
+  <% end %>
+</ul>
+
+<% end %>

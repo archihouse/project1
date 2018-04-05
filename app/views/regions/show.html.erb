@@ -1,0 +1,17 @@
+<h1><%= @region.name %></h1> <!-- Show name of Region at top of the page -->
+
+<ul> <!-- Create list of Region info -->
+  <li><p>Culture:  <%= @region.culture %></p></li> <!-- Show dominant culture of the region -->
+  <li><p>Religion:  <%= @region.religion %></p></li> <!-- Show dominant religion of the region -->
+  <li><p>Capital:  <%= @region.capital %></p></li> <!-- Show capital of the region -->
+</ul>
+
+<%= image_tag @region.image, :alt => @region.name, :class => 'feature' %> <!-- Shows map of region as feature class image -->
+<!-- uses image_tag to pull image url from seeds page -->
+
+<% if @current_user.present? %>
+<div class="controls"> <!-- div class for edit and delete buttons -->
+  <%= link_to 'Edit Region', edit_region_path(@region) %> <!-- create link (link_to) to 'Edit Region' and sets connection to @region values to edit region as necessary -->
+  <%= link_to 'Delete Region', @region, :method => 'delete', :data => { :confirm => 'Are you sure?' }%> <!-- create link (link_to) to 'Delete Region', runs 'delete' method on @region, then runs the confirmation question as a data event -->
+</div>
+<% end %>

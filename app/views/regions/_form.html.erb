@@ -1,0 +1,20 @@
+<%= form_for @region do |f| %> <!-- helper is in the controller as strong params -->
+
+<%= f.label :name %>
+<%= f.text_field :name, :autofocus => true %> <!-- auto focus onto the first field for text input once page is loaded -->
+
+<%= f.label :culture %>
+<%= f.text_field :culture %>
+
+<%= f.label :religion %>
+<%= f.text_field :religion %>
+
+<%= f.label :capital %>
+<%= f.text_field :capital %>
+
+<%= f.label :image, 'Upload Image URL' %>
+<%= f.url_field :image %>
+
+<%= f.submit %> <!-- creates submit button for the form field created above -->
+
+<% end %>

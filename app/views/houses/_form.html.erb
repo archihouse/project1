@@ -1,0 +1,20 @@
+<%= form_for @house do |f| %> <!-- helper is in the controller as strong params -->
+
+<%= f.label :name %>
+<%= f.text_field :name, :autofocus => true %> <!-- auto focus onto the first field for text input once page is loaded -->
+
+<%= f.label :lord %>
+<%= f.text_field :lord %>
+
+<%= f.label :heir %>
+<%= f.text_field :heir %>
+
+<%= f.label :words %>
+<%= f.text_field :words %>
+
+<%= f.label :image, 'Upload Image URL' %>
+<%= f.url_field :image %>
+
+<%= f.submit %> <!-- creates submit button for the form field created above -->
+
+<% end %>

@@ -1,0 +1,20 @@
+<%= form_for @city do |f| %> <!-- helper is in the controller as strong params -->
+
+<%= f.label :name %>
+<%= f.text_field :name, :autofocus => true %> <!-- auto focus onto the first field for text input once page is loaded -->
+
+<%= f.label :population %>
+<%= f.text_field :population %>
+
+<%= f.label :house_id %>
+<%= f.select :house_id, House.pluck(:name, :id), :include_blank => true %> <!-- provides a selection of Houses that can be linked to the city being created -->
+
+<%= f.label :region_id %>
+<%= f.select :region_id, Region.pluck(:name, :id), :include_blank => true %> <!-- provides a selection of Regions that can be linked to the city being created -->
+
+<%= f.label :image, 'Upload Image URL' %>
+<%= f.url_field :image %>
+
+<%= f.submit %> <!-- creates submit button for the form field created above -->
+
+<% end %>

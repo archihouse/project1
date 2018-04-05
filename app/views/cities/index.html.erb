@@ -1,0 +1,14 @@
+<h1>Cities</h1>
+
+<% @cities.each do |city| %>
+
+<%= image_tag city.image, :alt => city.name, :class => 'thumb' %>
+
+<ul>
+  <li><p>Name:  <%= link_to city.name, city %></p></li>
+  <li><p>Population:  <%= city.population %></p></li>
+  <li><p>House:  <%= link_to city.house.name, city.house %></p></li>
+  <li><p>Region:  <%= link_to city.region.name, city.region %></p></li>
+</ul>
+
+<% end %>
