@@ -2,13 +2,13 @@
 
 <% @regions.each do |region| %>
 
-<%= image_tag region.image, :alt => region.name, :class => 'thumb' %>
+<%= image_tag region.image, :alt => region.name, :class => 'thumb' %> <!-- image provided from db, thumbnail class as per css file -->
 
 <ul>
-  <li><p>Name:  <%= link_to region.name, region %><p></li>
-  <li><p>Culture:  <%= region.culture %></p></li>
-  <li><p>Religion:  <%= region.religion %></p></li>
-  <li><p>Capital:  <%= region.capital %></p></li>
+  <li><p>Name:  <%= link_to region.name, region %><p></li> <!-- provides both name of region and link to region page -->
+  <li><p>Culture:  <%= region.culture %></p></li> <!-- culture provided by db info -->
+  <li><p>Religion:  <%= region.religion %></p></li> <!-- religion provided by db info -->
+  <li><p>Capital:  <%= region.capital %></p></li> <!-- region provided by db info -->
 </ul>
 
 <% end %>

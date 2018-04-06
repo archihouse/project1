@@ -2,13 +2,13 @@
 
 <% @cities.each do |city| %>
 
-<%= image_tag city.image, :alt => city.name, :class => 'thumb' %>
+<%= image_tag city.image, :alt => city.name, :class => 'thumb' %> <!-- image provided from db, thumbnail class as per css file -->
 
 <ul>
-  <li><p>Name:  <%= link_to city.name, city %></p></li>
-  <li><p>Population:  <%= city.population %></p></li>
-  <li><p>House:  <%= link_to city.house.name, city.house %></p></li>
-  <li><p>Region:  <%= link_to city.region.name, city.region %></p></li>
+  <li><p>Name:  <%= link_to city.name, city %></p></li> <!-- provides both name of city and link to city page -->
+  <li><p>Population:  <%= city.population %></p></li> <!-- population provided from city db info -->
+  <li><p>House:  <%= link_to city.house.name, city.house %></p></li> <!-- provides both name of house and link to house page -->
+  <li><p>Region:  <%= link_to city.region.name, city.region %></p></li> <!-- provides both name of region and link to region page -->
 </ul>
 
 <% end %>

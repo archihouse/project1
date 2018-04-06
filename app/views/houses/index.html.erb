@@ -2,18 +2,18 @@
 
 <% @houses.each do |house| %>
 
-<% if house.image.present? %>
-  <%= image_tag house.image, :alt => house.name, :class => 'thumb' %>
+<% if house.image.present? %> <!-- only if house does have a house sigil in place -->
+  <%= image_tag house.image, :alt => house.name, :class => 'thumb' %> <!-- image provided from db, thumbnail class as per css file -->
 <% end %>
 
 <ul>
-  <li><p>House Name:  <%= link_to house.name, house %></p></li>
-  <li><p>Current Lord:  <%= house.lord %></p></li>
+  <li><p>House Name:  <%= link_to house.name, house %></p></li> <!-- provides both name of house and link to house page -->
+  <li><p>Current Lord:  <%= house.lord %></p></li> <!-- leader name provided from db info -->
   <% if house.heir.present? %>
-  <li><p>Current Heir:  <%= house.heir %></p></li>
+  <li><p>Current Heir:  <%= house.heir %></p></li> <!-- heir name provided from db info only if present -->
   <% end %>
   <% if house.words.present? %>
-  <li><p>Words:  <%= house.words %></p></li>
+  <li><p>Words:  <%= house.words %></p></li> <!-- words provided from db info only if existant -->
   <% end %>
 </ul>
 

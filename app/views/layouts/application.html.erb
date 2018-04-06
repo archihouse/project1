@@ -23,19 +23,19 @@
     <nav>
       <%= link_to 'Home', root_path %> <!-- home link to go to home page -->
       |
-      <%= link_to 'All Cities', cities_path %>
+      <%= link_to 'All Cities', cities_path %> <!-- All Cities view at any login status -->
       <% if @current_user.present? %>
-      <%= link_to 'New City', new_city_path %>
+      <%= link_to 'New City', new_city_path %> <!-- link to add new city only if logged in first -->
       <% end %>
       |
-      <%= link_to 'All Houses', houses_path %>
+      <%= link_to 'All Houses', houses_path %> <!-- All Houses view at any login status -->
       <% if @current_user.present? %>
-      <%= link_to 'New House', new_house_path %>
+      <%= link_to 'New House', new_house_path %> <!-- link to add new city only if logged in first -->
       <% end %>
       |
-      <%= link_to 'All Regions', regions_path %>
+      <%= link_to 'All Regions', regions_path %> <!-- All Regions view at any login status -->
       <% if @current_user.present? %>
-      <%= link_to 'New Region', new_region_path %>
+      <%= link_to 'New Region', new_region_path %> <!-- link to add new city only if logged in first -->
       <% end %>
     </nav>
     <%= yield %>
