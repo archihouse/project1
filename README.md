@@ -1,24 +1,32 @@
-# README
+# Project 1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Lineages and Histories of the Great Houses of the Known World
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+The Internet
 
-* System dependencies
+## Deployment
 
-* Configuration
+https://nameless-plains-71663.herokuapp.com/
 
-* Database creation
+## Usage
 
-* Database initialization
+For use to see list of houses, cities and regions of the Known World
 
-* How to run the test suite
+## Built With
 
-* Services (job queues, cache servers, search engines, etc.)
+HTML
+SCSS
+Ruby
+Rails
 
-* Deployment instructions
+## To Do List
 
-* ...
+* Would like to set up with an API (either external or internal made from Crusader Kings save file for user by gamers to make own wikis from individual playthroughs)
+* Could do with more styling and animation
+* Need a better way to distinguish Houses on list if there is no sigil
+
+## Acknowledgements
+
+The Old Gods and the New
